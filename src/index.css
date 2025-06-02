@@ -1,0 +1,45 @@
+/* src/index.css */
+
+/* === RESET CƠ BẢN === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === STYLE TOÀN CỤC === */
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f3f4f6; /* xám nhạt cho nền */
+  color: #1f2937;            /* xám đậm cho chữ mặc định */
+  line-height: 1.5;
+}
+
+/* Bạn có thể thêm các class hoặc selector toàn cục ở đây */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/* Ví dụ custom scrollbar (tuỳ chọn) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}

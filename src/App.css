@@ -1,0 +1,280 @@
+/* src/App.css */
+
+/* ==== Import Inter từ Google Fonts ==== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* === Reset & Global === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+/* === Global Styles (Light Mode) === */
+body {
+  background-color: #f3f4f6; /* nền xám nhạt */
+  color: #1f2937;            /* chữ xám đậm */
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+}
+
+/* === Container chính === */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem; /* 32px trên/dưới, 16px hai bên */
+}
+
+/* ====================================================== */
+/* === TIÊU ĐỀ CHÍNH: Người Việt, Tự hào sản phẩm Việt. === */
+/* ====================================================== */
+/* Áp dụng cho cả hai h1 (.title và .subtitle). */
+.title,
+.subtitle {
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  letter-spacing: -0.02em; /* kéo nhẹ chữ cho thanh thoát */
+  line-height: 1.2;        /* khoảng cách dòng 1.2 */
+  margin: 0;
+  padding: 0;
+  color: #1f2937;
+}
+
+/* --- Dòng 1 (.title) --- */
+.title {
+  font-size: 2.25rem; /* 36px trên mobile */
+  font-weight: 550;   /* đậm */
+}
+
+/* --- Dòng 2 (.subtitle) --- */
+.subtitle {
+  font-size: 2.25rem;   /* 36px trên mobile */
+  font-weight: 550;     /* nhẹ */
+  margin-top: 0.25rem;  /* 4px tách giữa 2 dòng */
+  margin-bottom: 2rem;  /* 32px tách xuống phần card */
+}
+
+/* === Responsive: tăng size ở sm & md === */
+@media screen and (min-width: 640px) {
+  .title,
+  .subtitle {
+    font-size: 3rem; /* 48px */
+  }
+}
+@media screen and (min-width: 768px) {
+  .title,
+  .subtitle {
+    font-size: 3.75rem; /* 60px */
+  }
+}
+
+/* ------------------------------------------------------ */
+/* ========== Phần Info Card (Light Mode) ========== */
+/* ------------------------------------------------------ */
+.info-card {
+  background-color: #ffffff;        /* nền trắng */
+  border-radius: 0.75rem;           /* bo góc 12px */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 680px;
+  overflow: hidden;
+
+  /* Thu nhỏ xuống 90% trên desktop */
+  transform-origin: top center;
+  transform: scale(0.9);
+}
+
+/* Bỏ scale khi màn hình ≤ 640px */
+@media screen and (max-width: 640px) {
+  .info-card {
+    transform: scale(1);
+  }
+}
+
+/* --- Header của Card --- */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;         /* nền trắng */
+  padding: 0.75rem 1.25rem;           /* 12px 20px */
+  cursor: default;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #e5e7eb;   /* gạch ngang phân cách */
+}
+
+/* Khi đã mở (mở nội dung) thì đổi nền header nhẹ */
+.card-header.open {
+  background-color: #f9fafb; /* xám rất nhạt */
+}
+
+/* --- Bên trái header (logo + text) --- */
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+/* Hình vuông bo góc nhẹ chứa logo */
+.logo-circle {
+  background-color: transparent;    /* bỏ nền xanh */
+  width: 2.5rem;                     /* 40px */
+  height: 2.5rem;                    /* 40px */
+  border-radius: 0.375rem;           /* bo góc 6px */
+  border: 1px solid #e5e7eb;         /* viền xám rất nhạt, mỏng */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.5rem;              /* 8px khoảng cách với text */
+  overflow: hidden;                  /* ẩn phần tràn của ảnh */
+}
+
+/* Thẻ img chứa logo tràn toàn khung, bo góc nhẹ */
+.logo-img {
+  width: 100%;                       /* tràn kín khung chứa */
+  height: 100%;
+  object-fit: cover;                 /* giữ tỉ lệ, crop vừa đầy */
+  border-radius: 0.25rem;            /* bo góc 4px cho ảnh */
+}
+
+/* Text tiêu đề header (Deutsch.vn) */
+.header-text .card-title {
+  font-size: 1.125rem; /* ~18px */
+  font-weight: 600;
+  color: #1F2937;
+  text-align: left;
+}
+
+/* Chú thích header (subtitle) */
+.header-text .card-subtitle {
+  font-size: 0.875rem;  /* ~14px */
+  color: #4B5563;       /* gray-600 */
+  margin-top: 0.125rem; /* 2px */
+  font-weight: 300;     /* mỏng */
+  text-align: left;
+}
+
+/* --- Bên phải header (button More Info) --- */
+.more-info-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.more-text {
+  font-size: 0.75rem;    /* 12px */
+  font-weight: 400;      /* mảnh */
+  color: #2563EB;        /* blue-600 */
+  line-height: 1;
+}
+
+.more-arrow {
+  font-size: 0.625rem;   /* 10px */
+  color: #2563EB;        /* blue-600 */
+  margin-left: 0.25rem;  /* 4px */
+  line-height: 1;
+}
+
+.more-info-btn:hover .more-text,
+.more-info-btn:hover .more-arrow {
+  color: #1D4ED8;        /* blue-700 */
+  text-decoration: underline;
+}
+
+/* === Nội dung ẩn bên dưới header === */
+.card-content {
+  padding: 1rem 1.5rem;   /* 16px 24px */
+  background-color: #ffffff;
+}
+
+/* Mỗi mục trong nội dung */
+.content-item {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 1rem;      /* 16px giữa các mục */
+}
+.content-item:first-child {
+  margin-top: 0;         /* mục đầu không cần margin-top */
+}
+
+/* Icon bên trái mỗi mục */
+.item-icon {
+  flex-shrink: 0;
+  width: 1.5rem;         /* 24px */
+  height: 1.5rem;        /* 24px */
+  color: #2563EB;        /* blue-600 */
+  margin-right: 0.75rem; /* 12px */
+  margin-top: 0.125rem;  /* 2px căn icon xuống */
+}
+.item-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Text bên phải mỗi mục */
+.item-text {
+  text-align: left;
+  flex: 1;
+}
+
+/* Tiêu đề mục (là link) */
+.item-title {
+  font-size: 1rem;       /* 16px */
+  font-weight: 600;
+  color: #111827;
+  text-decoration: none;
+}
+.item-title:hover {
+  text-decoration: underline;
+}
+
+/* Mô tả mục */
+.item-desc {
+  font-size: 0.875rem;   /* 14px */
+  color: #4B5563;        /* gray-600 */
+  line-height: 1.4;
+}
+
+/* Liên kết bên trong mục 3 */
+.item-links {
+  margin-top: 0.5rem;    /* 8px */
+}
+.item-link {
+  font-size: 0.875rem;   /* 14px */
+  font-weight: 500;
+  color: #2563EB;        /* blue-600 */
+  text-decoration: none;
+}
+.item-link:hover {
+  text-decoration: underline;
+}
+
+/* Mô tả nhỏ dưới link */
+.link-desc {
+  font-size: 0.75rem;    /* 12px */
+  color: #6B7280;        /* gray-500 */
+}
+
+/* Khoảng cách giữa hai link */
+.mt-2 {
+  margin-top: 0.5rem;    /* 8px */
+}
+
+/* === Footer === */
+.footer {
+  margin-top: 2rem;      /* 32px */
+  font-size: 0.875rem;   /* 14px */
+  color: #6B7280;        /* gray-500 */
+}
