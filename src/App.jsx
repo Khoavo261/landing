@@ -63,7 +63,7 @@ function App() {
               </div>
               <div className="item-text">
                 <a
-                  href="https://example.com/ke-hoach-du-an"
+                  href="https://docs.khoavo.vn/Deutsch.vn/"
                   className="item-title"
                   target="_blank"
                   rel="noopener noreferrer"
