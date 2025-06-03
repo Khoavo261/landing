@@ -123,7 +123,7 @@ function App() {
                 <div className="item-links">
                   <p>
                     <a
-                      href="https://deutschhub.vn"
+                      href="https://docs.khoavo.vn/Deutschhub.vn/"
                       className="item-link"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -137,7 +137,7 @@ function App() {
                   </p>
                   <p className="mt-2">
                     <a
-                      href="https://readflo.vn"
+                      href="https://docs.khoavo.vn/Readflo/"
                       className="item-link"
                       target="_blank"
                       rel="noopener noreferrer"
