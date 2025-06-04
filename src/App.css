@@ -28,20 +28,22 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
   padding: 2rem 1rem;
+  text-align: left; /* Căn trái toàn bộ nội dung */
 }
 
 /* === Tiêu đề chính === */
 .title,
 .subtitle {
   font-family: 'Inter', sans-serif;
-  text-align: center;
   letter-spacing: -0.02em;
   line-height: 1.2;
   margin: 0;
   padding: 0;
   color: #1f2937;
+  text-align: left; /* Căn trái tiêu đề */
+  width: 100%;
+  max-width: 680px;
 }
 
 .title {
@@ -79,6 +81,8 @@ body {
   overflow: hidden;
   transform-origin: top center;
   transform: scale(0.9);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media screen and (max-width: 640px) {
@@ -169,13 +173,14 @@ body {
   text-decoration: underline;
 }
 
-/* === Nội dung ẩn/hiện === */
+/* === Card Content === */
 .card-content {
   padding: 1rem 1.5rem;
   background-color: #ffffff;
+  text-align: left;
 }
 
-/* === Mỗi content item === */
+/* === Content Item === */
 .content-item {
   display: flex;
   flex-direction: column;
@@ -186,7 +191,7 @@ body {
   margin-top: 0;
 }
 
-/* --- Header từng mục xổ xuống --- */
+/* === Item Header (dropdown section title) === */
 .item-header {
   display: flex;
   align-items: center;
@@ -223,10 +228,11 @@ body {
   margin-left: 0.5rem;
 }
 
-/* --- Nội dung xổ xuống --- */
+/* === Item Links (dropdown content) === */
 .item-links {
   padding-left: 2rem;
   padding-top: 0.25rem;
+  text-align: left;
 }
 .item-links p {
   margin-bottom: 0.75rem;
@@ -250,7 +256,7 @@ body {
   margin-top: 0.125rem;
 }
 
-/* === Các mục đơn giản không xổ xuống === */
+/* === Icon trong các mục đơn lẻ === */
 .item-icon {
   flex-shrink: 0;
   width: 1.5rem;
@@ -290,7 +296,7 @@ body {
   color: #6b7280;
 }
 
-/* Khoảng cách giữa các link */
+/* === Utility === */
 .mt-2 {
   margin-top: 0.5rem;
 }
