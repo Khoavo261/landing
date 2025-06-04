@@ -32,6 +32,15 @@ body {
   text-align: left; /* Căn trái toàn bộ nội dung */
 }
 
+/* === Wrapper cho Tiêu đề === */
+.title-wrapper {
+  width: 100%;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
 /* === Tiêu đề chính === */
 .title,
 .subtitle {
@@ -41,9 +50,6 @@ body {
   margin: 0;
   padding: 0;
   color: #1f2937;
-  text-align: left; /* Căn trái tiêu đề */
-  width: 100%;
-  max-width: 680px;
 }
 
 .title {
