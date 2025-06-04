@@ -29,7 +29,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 2rem 1rem;
-  text-align: left; /* Căn trái toàn bộ nội dung */
+  text-align: center; /* Căn trái toàn bộ nội dung */
 }
 
 /* === Wrapper cho Tiêu đề === */
@@ -38,7 +38,7 @@ body {
   max-width: 680px;
   margin-left: auto;
   margin-right: auto;
-  text-align: left;
+  text-align: center;
 }
 
 /* === Tiêu đề chính === */
